@@ -2,13 +2,21 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <Platforms>AnyCPU;x64</Platforms>
+    <StartupObject>ImageConvertCore.Program</StartupObject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.6.0" />
+    <PackageReference Include="libjpeg-turbo-net" Version="2.0.15" />
     <PackageReference Include="SkiaSharp" Version="1.68.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.6.0" />
   </ItemGroup>
 
 </Project>
